@@ -22,22 +22,34 @@
 </header>
 
 <main>
-    <div id="sortfunction">
-        <h1 id="notesTitle">Notes</h1>
-        <div id="button">
-            <h1>Sort</h1>
-            <button data-id="highest" id = "highestPrio">Highest Prio</button>
-            <button data-id="newest">Newest</button>
-        </div>
-    </div>
-    <div id="note" class="note" data-id="note"></div>
+    <h1>ToDo App</h1>
+
+    <form id="form" action="./index.html" action="POST">
+        <label for="title">Title</label>
+        <input id="title" type="text" name="title" />
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description"></textarea>
+
+        <label for="importance">Importance</label>
+        <select name="importance" id="importance">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <label for="duedate">Duedate</label>
+        <input id="duedate" type="date" name="duedate" />
+        <button type="submit">Send</button>
+    </form>
 </main>
 
 <aside>
     <p>Info:</p>
     <p>
-        Desto wichtiger ein ToDo ist, desto schneller sollte es abgearbeitet
-        werden.
+        Hier können neue Notizen erfasst werden.
     </p>
 </aside>
 
