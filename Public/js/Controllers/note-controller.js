@@ -7,3 +7,4 @@ newNoteForm.innerHTML= "<h1>Sort</h1>\n" +
     "            <button data-id=\"newest\">Newest</button>";
 
 newNote.appendChild(newNoteForm);
+
