@@ -1,0 +1,52 @@
+* {
+    font-family: 'Public Sans', sans-serif;
+}
+/* Änderung der Schrift im ganzen HTML, * Selects all elements
+*/
+
+.btn {
+    background-color: #1f86ff;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #51b3ff;
+    color: white;
+}
+/* Button, ändert Farbe bei Mausaktivität
+*/
+
+.inputfields {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+#description {
+    height: 80px;
+}
+
+form {
+    max-width: 800px;
+    border: solid 1px;
+    border-radius: 5px;
+    border-color: #51b2fe;
+    padding: 10px 10px;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

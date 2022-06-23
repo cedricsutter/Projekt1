@@ -1,11 +1,28 @@
-import express from 'express';
+import express from 'express'
+import Datastore from 'nedb-promises'
+
 const router = express.Router();
-import * as notesController from '../controller/note-controller.js';
+const ndb = new Datastore({filename: '../data/data.db', autoload: true});
 
-router.get("/", notesController.showIndex);
-router.get("/note", notesController.getNote);
-router.post("/note", notesController.createNote);
-router.put("/note", notesController.updateNote);
-router.get("/note/:id/", notesController.getNoteById);
+router.get('/', async (req, res) => {
+    try {
+        let all = getAll();
+        res.json(all);
+    } catch (error) {
+        res.json({message: "error"});
+    }
+})
 
-export const orderRoutes = router;
+
+router.post('/', async (req, res) => {
+    try {
+        ndb.remove();
+    } catch (error) {
+        res.json({message: "error"});
+
+    }
+});
+
+
+export const noteRoutes = router;
+

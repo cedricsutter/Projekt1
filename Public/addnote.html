@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    <base href=".">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous" defer></script>
+    <script src="js/Controllers/addnote.js" type="module" defer></script>
+    <link rel="stylesheet" href="CSS/addnote.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+<main>
+    <div class="middle">
+        <form class="todos" id="">
+            <div class="inputfields">
+                <label for="title">Title</label>
+                <input id="title" type="text" name="title" required minlength="1" maxlength="20">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required minlength="1" maxlength="200">Please leave a ToDo</textarea>
+                <label for="importance">Importance</label>
+                <select id="importance" name="importance" >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <label for="duedate">Due date</label>
+                <input id="duedate" type="date" name="duedate" required>
+            </div>
+            <div class="done" id ="doneDiv">
+                <legend>Finished</legend>
+                <input type="checkbox" name="completed" id="done" value="done">
+                <label>Yes</label>
+            </div>
+            <div class="all-btn">
+                <button class="btn" type="submit" id="create">Create</button>
+                <button class="btn" type="submit" id="update">Update</button>
+                <button formnovalidate class="btn" type="button" id="CloseAndLeave">Close and leave!</button>
+            </div>
+        </form>
+    </div>
+</main>
+</body>
+</html>
+

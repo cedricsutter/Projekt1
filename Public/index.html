@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Note App</title>
+    <base href=".">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous" defer></script>
+    <script src="js/Controllers/index.js" type="module" defer></script>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>Todo App</h1>
+<div class="todoswitch">
+    <button type="button" class="btn" id="createnote">Create new todo</button>
+    <button type="button" class="btn btnS" id="styleChanger">Cheange Style</button>
+</div>
+<div class="filters">
+    <button id="sortedByName" type="button" class="filters-list" data-sort="name">Todo</button>
+    <button id="sortedByDate" type="button" class="filters-list" data-sort="due-date">Due date</button>
+    <button id="sortedByCreationDate" type="button" class="filters-list" data-sort="creation-date">Creation date</button>
+    <button id="sortedByImportance" type="button" class="filters-list" data-sort="importance">Importance</button>
+    <button id="taskdone" type="button" class="btn" data-sort="completed">Completed Tasks</button>
+</div>
+<div class="listmain">
+    <h3 class="listdesc">Due date</h3>
+    <h3 class="listdesc">Todo</h3>
+    <h3 class="listdesc">Importance</h3>
+</div>
+<div id="note-wrapper"></div>
+</body>
+</html>
