@@ -34,7 +34,7 @@ form.addEventListener("submit", function(event) {
 	} else {
 		addNote(data);
 	}
-	closeLeave(); //zurück zur Startseite
+	//closeLeave(); //zurück zur Startseite
 });
 
 function setForm() {

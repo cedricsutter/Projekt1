@@ -21,7 +21,6 @@ async function getNotes() {
     }
 }
 
-
 export async function addNotesRest(data) {
     const noteRestURL = getRestURL();
     try {
@@ -31,6 +30,38 @@ export async function addNotesRest(data) {
                 'Content-Type': 'application/json;charset=utf-8'
             },
             body: JSON.stringify(data)
+        })
+    } catch (error) {
+        throw error;
+    }
+}
+
+export async function updateNotes(data, id) {
+    let noteRestURL = getRestURL();
+    noteRestURL = noteRestURL + id.toString();
+    try {
+        let response = await fetch(noteRestURL, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(data)
+        })
+    } catch (error) {
+        throw error;
+    }
+}
+
+export async function deleteNote (id) {
+    let noteRestURL = getRestURL();
+    noteRestURL = noteRestURL + id.toString();
+    console.log(noteRestURL);
+    try {
+        let response = await fetch(noteRestURL, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
         })
     } catch (error) {
         throw error;
