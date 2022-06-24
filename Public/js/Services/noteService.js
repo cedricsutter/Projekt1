@@ -8,11 +8,11 @@ notes = getAll();
 const createID = () => Date.now();
 const checkboxDone = document.getElementById("done");
 
-export function addNote(data) {
+export async function addNote(data) {
 	data.id = createID(); //ID vergeben
 	data.completed = false;
 	data.creationdate = Date.now(); //jetztiges Datum mitgeben
-	addNotesRest(data);
+	await addNotesRest(data);
 }
 
 export function getById(id) {
