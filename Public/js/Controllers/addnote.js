@@ -1,5 +1,4 @@
 import { addNote, getById, updateNote } from "../Services/noteService.js";
-//import { addNote, getById, updateNote } from "../Services/restService.js";
 
 const closeAndLeave = document.getElementById("CloseAndLeave");
 const form = document.forms[0]; //erstes form element
@@ -18,11 +17,10 @@ export function setStyle() {
 }
 
 function closeLeave() {
-	window.open("Index.html", "_self");
+	window.open("index.html", "_self");
 }
 
 form.addEventListener("submit", function(event) {
-	event.preventDefault();
 	const formData = new FormData(this);
 	const entries = formData.entries();
 	const data = Object.fromEntries(entries);
@@ -34,7 +32,6 @@ form.addEventListener("submit", function(event) {
 	} else {
 		addNote(data);
 	}
-	closeLeave(); //zurück zur Startseite
 });
 
 function setForm() {
