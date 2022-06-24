@@ -1,7 +1,7 @@
 This is the To Do App from Cédric Sutter.
 
-To start it online, start the index.js.
-Now the Rest Service should be running on "running at http://127.0.0.1:3001/".
+To start it, run index.js with node.js.
+Now the Rest Service should be running on http://127.0.0.1:3001/.
 
 Rest API:
 
